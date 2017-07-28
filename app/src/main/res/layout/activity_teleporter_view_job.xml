@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.monash.fit3027.teleporter.TeleporterViewJobActivity">
+
+
+    <TextView
+        android:id="@+id/recipientNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:text="Recipient Name: "
+        android:layout_above="@+id/pickupAddTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp" />
+
+    <TextView
+        android:id="@+id/currentRecipientTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/recipientNameTextView"
+        android:layout_alignBottom="@+id/recipientNameTextView"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/recipientNameTextView"
+        android:text="Current Recipient" />
+
+    <TextView
+        android:id="@+id/pickupAddTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pickup Location:"
+        android:layout_marginBottom="15dp"
+        android:layout_above="@+id/currenctDropoffAddtextView"
+        android:layout_toStartOf="@+id/currentRecipientTextView" />
+
+    <TextView
+        android:id="@+id/currentPickupAddtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/currentRecipientTextView"
+        android:layout_alignTop="@+id/pickupAddTextView"
+        android:layout_alignBottom="@+id/pickupAddTextView"
+        android:text="Current Pickup Location" />
+
+    <TextView
+        android:id="@+id/dropoffAddTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/itemTypeTextView"
+        android:layout_alignStart="@+id/pickupAddTextView"
+        android:layout_marginBottom="17dp"
+        android:text="Dropoff Location:" />
+
+    <TextView
+        android:id="@+id/currenctDropoffAddtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dropoffAddTextView"
+        android:layout_alignStart="@+id/currentPickupAddtextView"
+        android:layout_alignTop="@+id/dropoffAddTextView"
+        android:text="Current Dropoff Location" />
+
+    <TextView
+        android:id="@+id/itemTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Type: "
+        android:layout_above="@+id/itemTextView"
+        android:layout_alignStart="@+id/dropoffAddTextView"
+        android:layout_marginBottom="13dp" />
+
+    <TextView
+        android:id="@+id/currentItemTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/currenctDropoffAddtextView"
+        android:layout_alignTop="@+id/itemTypeTextView"
+        android:layout_alignBottom="@+id/itemTypeTextView"
+        android:text="Current Item Type" />
+
+    <TextView
+        android:id="@+id/itemTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item: "
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/itemTypeTextView" />
+
+    <TextView
+        android:id="@+id/currentItemTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/currentItemTypeTextView"
+        android:layout_alignTop="@+id/itemTextView"
+        android:layout_alignBottom="@+id/itemTextView"
+        android:text="Current Item" />
+
+    <TextView
+        android:id="@+id/deliveryType1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery Type: "
+        android:layout_below="@+id/itemTextView"
+        android:layout_alignStart="@id/pickupAddTextView"
+        android:layout_marginTop="36dp" />
+
+    <TextView
+        android:id="@+id/currentDeliveryTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/currentItemTextView"
+        android:layout_alignTop="@+id/deliveryType1TextView"
+        android:layout_marginRight="50dp"
+        android:maxLines="3"
+        android:lines="3"
+        android:text="Current Delivery Type" />
+
+    <Button
+        android:id="@+id/acceptButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="Accept"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorOrange"
+        android:layout_toEndOf="@+id/itemTextView" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_alignBaseline="@+id/acceptButton"
+        android:layout_alignBottom="@+id/acceptButton"
+        android:layout_alignTop="@+id/acceptButton"
+        android:layout_toRightOf="@+id/acceptButton"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorBlue"
+        android:layout_marginLeft="60dp"
+         />
+
+    <TextView
+        android:id="@+id/queryTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="37dp"
+        android:gravity="center"
+        android:text="Would You Like To Accept This Job?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cancelButton"
+        android:layout_marginBottom="11dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/space4" />
+</RelativeLayout>

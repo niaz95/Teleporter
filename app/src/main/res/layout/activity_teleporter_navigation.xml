@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.monash.fit3027.teleporter.TeleporterNavigation"
+    android:layout_alignParentStart="true"
+    android:layout_alignBottom="@+id/centerpoint1" />
+
+    <ImageButton
+        android:id="@+id/callButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/sym_action_call"
+        android:layout_marginEnd="68dp"
+        android:layout_marginTop="36dp"
+        android:layout_alignTop="@+id/centerpoint1"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:id="@+id/messageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/callButton"
+        android:layout_alignTop="@+id/callButton"
+        android:layout_marginStart="86dp"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+    <TextView
+        android:id="@+id/clientNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Client Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:layout_marginTop="13dp"
+        android:layout_alignTop="@+id/callButton"
+        android:layout_toStartOf="@+id/callButton" />
+
+    <TextView
+        android:id="@+id/recipientTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You are on your way!"
+        android:layout_above="@+id/messageButton"
+        android:layout_alignEnd="@+id/messageButton" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/centerpoint1"
+        android:layout_marginBottom="190dp" />
+
+    <Button
+        android:id="@+id/progressButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/callButton"
+        android:layout_alignStart="@+id/messageButton"
+        android:layout_below="@+id/centerpoint1"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorBlue"
+        android:layout_centerHorizontal="true"
+        android:text="Picked Up" />
+
+    <Button
+        android:id="@+id/navigateButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/callButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorBlack"
+        android:text="Navigate with Maps"
+        android:textColor="@color/colorWhite" />
+
+</RelativeLayout>

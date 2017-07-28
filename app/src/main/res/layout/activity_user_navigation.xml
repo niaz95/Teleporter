@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/colorGray"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/centerpoint2"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.monash.fit3027.teleporter.UserNavigation"
+
+    android:layout_above="@+id/textView2"
+        android:layout_alignBottom="@id/centerpoint2"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Delivery is on its way! "
+        android:layout_below="@+id/centerpoint2"
+        android:layout_toStartOf="@+id/centerpoint2"
+        android:layout_marginTop="44dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:text="Driver Name"
+        android:layout_below="@+id/centerpoint2"
+        android:layout_alignStart="@+id/deliveryStatusTextView" />
+
+    <ImageButton
+        android:id="@+id/callButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/sym_action_call"
+        android:layout_marginEnd="47dp"
+
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/deliveryStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/centerpoint2"
+        android:layout_marginTop="64dp"
+        android:text="Picked Up"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_alignBottom="@+id/callButton2"
+        android:layout_alignStart="@+id/textView2" />
+
+
+    <TextView
+        android:id="@+id/toTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To: "
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/recipientNameTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/toTextView"
+        android:paddingLeft="10dp"
+        android:layout_alignBottom="@+id/toTextView"
+        android:layout_alignEnd="@+id/deliveryStatusTextView"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/itemNameTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/toTextView"
+        android:layout_below="@+id/toTextView"
+        android:layout_marginTop="28dp"
+        android:text="TextView" />
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Button
+        android:id="@+id/deliveryRequestButton"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/space3"
+        android:layout_marginTop="80dp"
+        android:layout_toStartOf="@+id/space2"
+        android:text="Post New Dellivery"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/deliveryRequestButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="70dp"
+        android:id="@+id/space2" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/space2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="70dp"
+        android:id="@+id/space3" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/space5" />
+
+    <ListView
+        android:id="@+id/jobsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/space5"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/historyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/space5"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="22dp"
+        android:text="Delivery Order History:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle" />
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/historyTextView"
+        android:layout_marginTop="30dp"
+        android:text="Welcome, User"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/logoutTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/deliveryRequestButton"
+        android:text="Logout" />
+
+    <ImageView
+        android:id="@+id/logoutImageView"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/logoutTextView"
+        android:padding="5dp"
+        app:srcCompat="@mipmap/ic_logout" />
+
+</RelativeLayout>

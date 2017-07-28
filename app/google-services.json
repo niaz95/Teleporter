@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "984418329969",
+    "firebase_url": "https://teleporter-aa972.firebaseio.com",
+    "project_id": "teleporter-aa972",
+    "storage_bucket": "teleporter-aa972.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984418329969:android:7df8047f244e54cc",
+        "android_client_info": {
+          "package_name": "edu.monash.fit3027.teleporter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984418329969-gfjj71b16tvo2s2o40pjhqddmiduqlnf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.monash.fit3027.teleporter",
+            "certificate_hash": "83243ba799b6fc1b15add8681a8845f806a502ac"
+          }
+        },
+        {
+          "client_id": "984418329969-uoa2fe1ovoi3u0nd3k3qqprtdo2e3l0t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCzYpqg65MJl4AQTe5vJkAsGnG0bOzh5I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984418329969-uoa2fe1ovoi3u0nd3k3qqprtdo2e3l0t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

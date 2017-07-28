@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+    <!-- places autocomplete implementation-->
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/autocomplete_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pickupLocationTextView"
+        android:layout_alignStart="@+id/pickupLocationTextView"
+        android:layout_toStartOf="@+id/space">
+
+        <edu.monash.fit3027.teleporter.DelayAutoCompleteTextView
+            android:id="@+id/geo_autocomplete"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:imeOptions="flagNoExtractUi|actionSearch"
+            android:inputType="textCapSentences"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:padding="10dp"
+            android:dropDownWidth="fill_parent"
+
+            />
+
+        <ImageView
+            android:id="@+id/geo_autocomplete_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_clear_black_24dp"
+            android:layout_gravity="center_vertical|end"
+            android:visibility="gone"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            />
+    </FrameLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/autocomplete_fragment2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dropoffLocationTextView"
+        android:layout_alignStart="@+id/dropoffLocationTextView"
+        android:layout_toStartOf="@+id/space">
+
+        <edu.monash.fit3027.teleporter.DelayAutoCompleteTextView
+            android:id="@+id/geo_autocomplete2"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:imeOptions="flagNoExtractUi|actionSearch"
+            android:inputType="textCapSentences"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:padding="10dp"
+            android:dropDownWidth="fill_parent"
+
+            />
+
+        <ImageView
+            android:id="@+id/geo_autocomplete_clear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_clear_black_24dp"
+            android:layout_gravity="center_vertical|end"
+            android:visibility="gone"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            />
+    </FrameLayout>
+
+
+    <!-- -->
+
+    <TextView
+        android:id="@+id/pickupLocationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="Pickup Location:"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/radioGroup" />
+
+    <!--EditText
+        android:id="@+id/pickupLocationEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/pickupLocationTextView"
+        android:layout_alignStart="@+id/pickupLocationTextView"
+        android:layout_toStartOf="@+id/space" /-->
+
+    <TextView
+        android:id="@+id/dropoffLocationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/autocomplete_fragment"
+        android:layout_below="@+id/autocomplete_fragment"
+        android:text="Drop-off Location" />
+
+    <!--<EditText
+        android:id="@+id/dropoffLocationTextEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/autocomplete_fragment"
+        android:layout_below="@+id/dropoffLocationTextView"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignStart="@+id/dropoffLocationTextView" />-->
+
+    <TextView
+        android:id="@+id/startAddTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type of Item:"
+        android:layout_below="@+id/recipientNameTextEdit"
+        android:layout_alignStart="@+id/itemTextEdit" />
+
+    <TextView
+        android:id="@+id/recipientTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recipient's Name: "
+        android:layout_below="@+id/autocomplete_fragment2"
+        android:layout_alignEnd="@+id/dropoffLocationTextView" />
+
+    <EditText
+        android:id="@+id/recipientNameTextEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/recipientTextView"
+        android:layout_alignStart="@+id/recipientTextView"
+        android:layout_alignEnd="@+id/autocomplete_fragment2" />
+
+
+
+    <TextView
+        android:id="@+id/itemDeliveryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item of Delivery:"
+
+        android:layout_below="@+id/foodRadioGroup"
+        android:layout_alignStart="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/itemTextEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/itemDeliveryTextView"
+        android:layout_alignEnd="@+id/recipientNameTextEdit"
+        android:layout_alignStart="@+id/itemDeliveryTextView" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/autocomplete_fragment"
+        android:layout_marginEnd="19dp"
+        android:id="@+id/space" />
+
+    <TextView
+        android:id="@+id/deliveryTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery Type:"
+        android:layout_below="@+id/itemTextEdit"
+        android:layout_alignStart="@+id/radioGroup" />
+
+    <Spinner
+        android:id="@+id/deliveryTypeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deliveryTypeTextView"
+        android:layout_alignEnd="@+id/itemTextEdit"
+        android:layout_alignStart="@+id/deliveryTypeTextView" />
+
+    <Button
+        android:id="@+id/SubmitButton2"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deliveryTypeSpinner"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorBlue"
+        android:text="Submit" />
+
+    <RadioGroup
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:id="@+id/radioGroup"
+        android:layout_below="@+id/startAddTextView"
+        android:layout_alignEnd="@+id/SubmitButton2">
+
+    <RadioButton
+        android:id="@+id/ParcelRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parcel/ Package/ Documents"
+        android:layout_below="@+id/largeItemRadioButton"
+        android:layout_alignStart="@+id/largeItemRadioButton" />
+
+    <RadioButton
+        android:id="@+id/largeItemRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Item"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/fragileRadioButton" />
+
+        <RadioButton
+            android:id="@+id/fragileRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/startAddTextView"
+            android:layout_alignTop="@+id/ParcelRadioButton"
+            android:text="Fragile" />
+
+        <TextView
+            android:id="@+id/FoodTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food:"
+            android:textAppearance="@android:style/TextAppearance.Material"
+            android:layout_below="@+id/radioGroup"
+            android:layout_alignStart="@+id/hotFoodradioButton" />
+
+    </RadioGroup>
+    <RadioGroup
+        android:layout_alignStart="@+id/radioGroup"
+        android:layout_below="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodRadioGroup"
+        android:orientation="horizontal">
+    <RadioButton
+        android:id="@+id/coldRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cold"
+
+         />
+
+    <RadioButton
+        android:id="@+id/hotFoodradioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hot"
+
+         />
+
+    <RadioButton
+        android:id="@+id/neitherRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Neither"
+        />
+    </RadioGroup>
+
+
+
+
+</RelativeLayout>
