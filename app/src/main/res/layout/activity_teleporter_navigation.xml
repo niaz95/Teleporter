@@ -33,6 +33,14 @@
         android:layout_toStartOf="@+id/navigateButton" />
 
     <TextView
+        android:id="@+id/recipientTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You are on your way!"
+        android:layout_above="@+id/messageButton"
+        android:layout_toStartOf="@+id/clientNameTextView" />
+
+    <TextView
         android:id="@+id/clientNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
