@@ -117,11 +117,16 @@ public class TeleporterNavigation extends AppCompatActivity implements OnMapRead
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        LatLng showAddress;
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        String currentProgress = progressButton.getText().toString();
+        if(currentProgress.equals("Picked Up")){
+            showAddress = new LatLng(currentJob.getM_sEndLat(),currentJob.getM_sEndLng());
+        }else{
+            showAddress = new LatLng(currentJob.getM_sStartLat(),currentJob.getM_sStartLng());
+        }
+        mMap.addMarker(new MarkerOptions().position(showAddress).title("Marker in Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(showAddress, 12f));
     }
 
     @Override
@@ -209,6 +214,7 @@ public class TeleporterNavigation extends AppCompatActivity implements OnMapRead
                             }
                         });
                 alertDialog.show();
+                startActivity(new Intent(getApplicationContext(), TeleporterHomeActivity.class));
 
 
 

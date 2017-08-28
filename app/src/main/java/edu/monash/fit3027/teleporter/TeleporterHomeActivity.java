@@ -290,7 +290,7 @@ public class TeleporterHomeActivity extends AppCompatActivity implements OnMapRe
     public boolean onNavigationItemSelected(MenuItem item) {
         //Navigation item clicks handled here
         int id = item.getItemId();
-        Toast.makeText(this,"This is "+id,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this,"This is "+id,Toast.LENGTH_SHORT).show();
 
         if(id == R.id.new_job){
             startActivity(new Intent(getApplicationContext(),PostJobActivity.class));
