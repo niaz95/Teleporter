@@ -1,3 +1,2 @@
 # Teleporter
-Android app that connects people who would like anything delivered anywhere to people who want to earn some extra income carrying out delivery jobs 
-#Made on Android Studio
+Android app that allows users to place orders for delivering goods from one place to another. It also provides deliverymen with an interface to accept delivery jobs, carry out deliveries and optimal path on the map to the pickup/dropoff location. 
